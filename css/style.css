@@ -978,3 +978,31 @@ body{
         width:250px;
     }
 }
+/* Your existing CSS above */
+
+
+/* MOBILE NAVIGATION */
+@media (max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .logo{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a{
+        font-size: 1rem;
+    }
+
+}
