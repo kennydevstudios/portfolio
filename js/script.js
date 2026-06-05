@@ -17,21 +17,6 @@ const startCounter = () => {
     });
 };
 
-const text =
-"Full-Stack Web Developer & Ecommerce Specialist";
-
-const typingText =
-document.getElementById("typing-text");
-let index = 0;
-function type(){
-    if(index < text.length){
-        typingText.textContent += text.charAt(index);
-        index++;
-        setTimeout(type,60);
-    }
-}
-type();
-
 const reveals = document.querySelectorAll('.reveal');
 
 window.addEventListener('scroll', () => {

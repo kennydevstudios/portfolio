@@ -921,3 +921,60 @@ body{
     border-top:
     1px solid rgba(255,255,255,.03);
 }
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px){
+
+    .navbar{
+        padding:15px 20px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .logo{
+        font-size:1.5rem;
+        text-align:center;
+    }
+
+    .hero-content{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero-text{
+        width:100%;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero h2{
+        font-size:1.6rem;
+    }
+
+    .hero-description{
+        max-width:100%;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .hero-stats{
+        justify-content:center;
+    }
+
+    .hero-image img{
+        width:250px;
+    }
+}
