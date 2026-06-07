@@ -879,71 +879,9 @@ body{
 .whatsapp-float:hover{
     transform:translateY(-5px) scale(1.1);
 }
-#scrollTopBtn{
-    position:fixed;
-    bottom:100px;
-    right:25px;
-    width:55px;
-    height:55px;
-    border:none;
-    border-radius:50%;
-    background:#3B82F6;
-    color:white;
-    cursor:pointer;
-    font-size:1.2rem;
-    display:none;
-    z-index:1000;
-    transition:.3s ease;
-}
-
-#scrollTopBtn:hover{
-    transform:translateY(-5px);
-}
-
-.about,
-.skills,
-.projects,
-.experience,
-.education,
-.contact{
-    border-top:
-    1px solid rgba(255,255,255,.03);
-}
-@media (max-width:768px){
-
-    .navbar{
-        padding:15px 5%;
-        flex-direction:column;
-        gap:12px;
-    }
-
-    .logo{
-        font-size:1.1rem;
-        justify-content:center;
-        width:100%;
-    }
-
-    .logo-box{
-        width:32px;
-        height:32px;
-        font-size:.8rem;
-    }
-
-    .nav-links{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:10px;
-    }
-
-    .nav-links a{
-        font-size:.9rem;
-    }
-
-}
-
-
-/* HAMBURGER MENU */
+/* =========================
+   MOBILE NAVIGATION
+========================= */
 
 .menu-toggle{
     display:none;
@@ -951,14 +889,13 @@ body{
     cursor:pointer;
     color:white;
 }
-
-/* MOBILE */
 
 @media (max-width:768px){
 
     .navbar{
         flex-direction:row;
         justify-content:space-between;
+        align-items:center;
         padding:15px 5%;
     }
 
@@ -966,65 +903,29 @@ body{
         font-size:1rem;
     }
 
-    .logo-box{
-        width:32px;
-        height:32px;
-        font-size:.8rem;
-    }
-
     .menu-toggle{
         display:block;
     }
 
     .nav-links{
+        display:none;
         position:absolute;
-        top:75px;
+        top:70px;
         left:0;
         width:100%;
         background:#0A0F1C;
         flex-direction:column;
-        gap:20px;
-        padding:20px;
-        display:none;
-        border-top:1px solid rgba(255,255,255,.05);
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-}
-@media (max-width:768px){
-
-    .logo{
-        font-size:1rem;
-    }
-
-}
-.menu-toggle{
-    display:none;
-    font-size:2rem;
-    cursor:pointer;
-    color:white;
-}
-
-/* MOBILE MENU */
-
-@media (max-width:768px){
-
-    .menu-toggle{
-        display:block;
-    }
-
-    .nav-links{
-        display:none;
-        width:100%;
-        flex-direction:column;
         text-align:center;
         gap:20px;
-        padding-top:20px;
+        padding:20px 0;
+        border-top:1px solid rgba(255,255,255,.05);
     }
 
     .nav-links.show{
         display:flex;
+    }
+
+    .nav-links a{
+        font-size:1rem;
     }
 }

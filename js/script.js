@@ -88,32 +88,18 @@ scrollBtn.addEventListener("click",()=>{
         behavior:"smooth"
     });
 });
-
-const menuToggle =
-document.getElementById("menu-toggle");
-
-const navMenu =
-document.getElementById("nav-links");
-
-menuToggle.addEventListener("click", () => {
-
-    navMenu.classList.toggle("active");
-
-});
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-});
 const menuToggle =
 document.getElementById("menu-toggle");
 
 const mobileMenu =
 document.querySelector(".nav-links");
 
-menuToggle.addEventListener("click", () => {
+if(menuToggle && mobileMenu){
 
-    mobileMenu.classList.toggle("show");
+    menuToggle.addEventListener("click", () => {
 
-});
+        mobileMenu.classList.toggle("show");
+
+    });
+
+}
