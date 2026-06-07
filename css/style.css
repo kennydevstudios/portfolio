@@ -143,8 +143,10 @@ body{
 }
 .reveal{
     opacity:0;
-    transform:translateY(40px);
-    transition:all .8s ease;
+    transform:translateY(80px);
+    transition:
+    opacity 1s ease,
+    transform 1s ease;
 }
 
 .reveal.active{
@@ -241,8 +243,30 @@ body{
 }
 .btn-primary{
     background:#3B82F6;
-    color:#fff;
-    box-shadow:0 0 25px rgba(59,130,246,.3);
+    color:white;
+    box-shadow:
+    0 0 20px
+    rgba(59,130,246,.4);
+    
+    animation:
+    pulseGlow 2s infinite;
+}
+@keyframes pulseGlow{
+    0%{
+        box-shadow:
+        0 0 20px
+        rgba(59,130,246,.4);
+    }
+    50%{
+        box-shadow:
+        0 0 35px
+       rgba(59,130,246,.7);
+    }
+    100%{
+        box-shadow:
+        0 0 20px
+       rgba(59,130,246,.4);
+    }
 }
 
 .btn-primary:hover{
@@ -260,6 +284,24 @@ body{
 .hero-image img{
     width:300px;
     border-radius:20px;
+
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
 }
 .hero-image{
     flex:0.8;
@@ -927,5 +969,39 @@ body{
 
     .nav-links a{
         font-size:1rem;
+    }
+}
+.project-card{
+    opacity:0;
+    transform:translateY(50px);
+    animation:projectFade 1s forwards;
+}
+
+.project-card:nth-child(1){
+    animation-delay:.2s;
+}
+
+.project-card:nth-child(2){
+    animation-delay:.4s;
+}
+
+.project-card:nth-child(3){
+    animation-delay:.6s;
+}
+
+.project-card:nth-child(4){
+    animation-delay:.8s;
+}
+
+@keyframes projectFade{
+    from{
+
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
 }

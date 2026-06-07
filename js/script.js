@@ -19,19 +19,35 @@ const startCounter = () => {
     });
 };
 
-const reveals = document.querySelectorAll('.reveal');
+const reveals =
+document.querySelectorAll('.reveal');
 
-window.addEventListener('scroll', () => {
+const revealOnScroll = () => {
+
     reveals.forEach(section => {
 
         const sectionTop =
         section.getBoundingClientRect().top;
 
-        if(sectionTop < window.innerHeight - 100){
+        const triggerPoint =
+        window.innerHeight - 100;
+
+        if(sectionTop < triggerPoint){
+
             section.classList.add('active');
+
         }
+
     });
-});
+
+};
+
+window.addEventListener(
+    'scroll',
+    revealOnScroll
+);
+
+revealOnScroll();
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
