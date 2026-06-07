@@ -1,3 +1,5 @@
+console.log("JS Loaded");
+
 const counters = document.querySelectorAll('.counter');
 
 const startCounter = () => {
@@ -96,5 +98,22 @@ document.getElementById("nav-links");
 menuToggle.addEventListener("click", () => {
 
     navMenu.classList.toggle("active");
+
+});
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+});
+const menuToggle =
+document.getElementById("menu-toggle");
+
+const mobileMenu =
+document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("show");
 
 });

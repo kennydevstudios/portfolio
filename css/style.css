@@ -1000,3 +1000,31 @@ body{
     }
 
 }
+.menu-toggle{
+    display:none;
+    font-size:2rem;
+    cursor:pointer;
+    color:white;
+}
+
+/* MOBILE MENU */
+
+@media (max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        text-align:center;
+        gap:20px;
+        padding-top:20px;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+}
