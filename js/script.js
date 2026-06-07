@@ -86,3 +86,15 @@ scrollBtn.addEventListener("click",()=>{
         behavior:"smooth"
     });
 });
+
+const menuToggle =
+document.getElementById("menu-toggle");
+
+const navMenu =
+document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+
+    navMenu.classList.toggle("active");
+
+});
