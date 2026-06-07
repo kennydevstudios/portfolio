@@ -72,22 +72,31 @@ window.addEventListener('scroll',()=>{
 const scrollBtn =
 document.getElementById("scrollTopBtn");
 
-window.addEventListener("scroll",()=>{
-    if(window.scrollY > 300){
+if(scrollBtn){
 
-        scrollBtn.style.display="block";
-    }else{
+    window.addEventListener("scroll",()=>{
 
-        scrollBtn.style.display="none";
-    }
-});
+        if(window.scrollY > 300){
 
-scrollBtn.addEventListener("click",()=>{
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
+            scrollBtn.style.display="block";
+
+        }else{
+
+            scrollBtn.style.display="none";
+
+        }
     });
-});
+
+    scrollBtn.addEventListener("click",()=>{
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+    });
+}
+
+
 const menuToggle =
 document.getElementById("menu-toggle");
 
@@ -97,6 +106,8 @@ document.querySelector(".nav-links");
 if(menuToggle && mobileMenu){
 
     menuToggle.addEventListener("click", () => {
+
+        console.log("Hamburger clicked");
 
         mobileMenu.classList.toggle("show");
 
